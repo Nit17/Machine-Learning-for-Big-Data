@@ -1,0 +1,167 @@
+
+#AND MP Net
+def and_gate(x1, x2):
+    w1 = 1
+    w2 = 1
+    y_in = x1 * w1 + x2 * w2
+
+    if x1 == 1 and x2 == 1:
+        y_actual = 1
+    else:
+        y_actual = 0
+
+    if y_actual==1:
+        activation_function.append(y_in)
+
+# Test cases for all combinations
+combinations = [(0, 0), (0, 1), (1, 0), (1, 1)]
+activation_function = []
+
+for x1, x2 in combinations:
+    and_gate(x1, x2)
+min_value=min(activation_function)
+max_value=max(activation_function)
+print(activation_function)
+if(min_value==max_value and min_value!=0):
+  print("Activation function is 1 if y_in>="+str(min_value))
+  print("Activation function is 0 if y_in<"+str(min_value))
+
+#OR MP Net
+def or_gate(x1, x2):
+    w1 = 1
+    w2 = 1
+    y_in = x1 * w1 + x2 * w2
+
+    if x1 == 1 or x2 == 1:
+        y_actual = 1
+    else:
+        y_actual = 0
+
+    if y_actual==1:
+        activation_function.append(y_in)
+
+# Test cases for all combinations
+combinations = [(0, 0), (0, 1), (1, 0), (1, 1)]
+activation_function = []
+
+for x1, x2 in combinations:
+    or_gate(x1, x2)
+min_value=min(activation_function)
+max_value=max(activation_function)
+print(activation_function)
+if(min_value==max_value and min_value!=0):
+  print("Activation function is 1 if y_in>="+str(min_value))
+  print("Activation function is 0 if y_in<"+str(min_value))
+elif(min_value!=0):
+   print("Activation function is 1 if y_in>="+str(min_value))
+   print("Activation function is 0 if y_in<"+str(min_value))
+
+#NOR MP Net
+def nor_gate(x1, x2):
+    w1 = 1
+    w2 = 1
+    y_in = x1 * w1 + x2 * w2
+
+    if x1 == 0 and x2 == 0:
+        y_actual = 1
+    else:
+        y_actual = 0
+
+    if y_actual==1:
+        activation_function.append(y_in)
+
+# Test cases for all combinations
+combinations = [(0, 0), (0, 1), (1, 0), (1, 1)]
+activation_function = []
+
+for x1, x2 in combinations:
+    nor_gate(x1, x2)
+min_value=min(activation_function)
+print(activation_function)
+
+max_value=max(activation_function)
+print(activation_function)
+if(min_value==max_value and min_value!=0):
+  print("Activation function is 1 if y_in>="+str(min_value))
+  print("Activation function is 0 if y_in<"+str(min_value))
+elif(min_value!=0):
+   print("Activation function is 1 if y_in>="+str(min_value))
+   print("Activation function is 0 if y_in<"+str(min_value))
+else:
+  print("Activation function is 1 if y_in<="+str(min_value))
+  print("Activation function is 0 if y_in>"+str(min_value))
+
+#NAND MP Net
+def nand_gate(x1, x2):
+    w1 = 1
+    w2 = 1
+    y_in = x1 * w1 + x2 * w2
+
+    if x1 == 1 and x2 == 1:
+        y_actual = 0
+    else:
+        y_actual = 1
+
+    if y_actual==1:
+        activation_function.append(y_in)
+
+# Test cases for all combinations
+combinations = [(0, 0), (0, 1), (1, 0), (1, 1)]
+activation_function = []
+
+for x1, x2 in combinations:
+    nand_gate(x1, x2)
+min_value=min(activation_function)
+print(activation_function)
+
+max_value=max(activation_function)
+print(activation_function)
+if(min_value==max_value and min_value!=0):
+  print("Activation function is 1 if y_in>="+str(min_value))
+  print("Activation function is 0 if y_in<"+str(min_value))
+elif(min_value!=0):
+   print("Activation function is 1 if y_in>="+str(min_value))
+   print("Activation function is 0 if y_in<"+str(min_value))
+if(min_value!=max_value and min_value==0):
+  print("Activation function is 1 if y_in<="+str(max_value))
+  print("Activation function is 0 if y_in>"+str(max_value))
+else:
+  print("Activation function is 1 if y_in<="+str(min_value))
+  print("Activation function is 0 if y_in>"+str(min_value))
+
+#NOT MP Net
+def not_gate(x):
+    w = 1
+    y_in = x1 * w
+
+    if x == 0:
+        y_actual = 1
+    else:
+        y_actual = 0
+
+    if y_actual==1:
+        activation_function.append(y_in)
+
+# Test cases for all combinations
+combinations = [(0, 0), (0, 1), (1, 0), (1, 1)]
+activation_function = []
+
+for x1, x2 in combinations:
+    nand_gate(x1, x2)
+min_value=min(activation_function)
+print(activation_function)
+
+max_value=max(activation_function)
+print(activation_function)
+if(min_value==max_value and min_value!=0):
+  print("Activation function is 1 if y_in>="+str(min_value))
+  print("Activation function is 0 if y_in<"+str(min_value))
+elif(min_value!=0):
+   print("Activation function is 1 if y_in>="+str(min_value))
+   print("Activation function is 0 if y_in<"+str(min_value))
+elif(min_value!=max_value and min_value==0):
+  print("Activation function is 1 if y_in<="+str(max_value))
+  print("Activation function is 0 if y_in>"+str(max_value))
+else:
+  print("Activation function is 1 if y_in<="+str(min_value))
+  print("Activation function is 0 if y_in>"+str(min_value))
